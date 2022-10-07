@@ -1,0 +1,36 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:tns="http://spring.io/guides/gs-producing-web-service"
+           targetNamespace="http://spring.io/guides/gs-producing-web-service"
+           elementFormDefault="qualified">
+    <xs:element name="carreraRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="carrera" type="tns:carreraSearch"></xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="carreraResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="code" type="xs:string"></xs:element>
+                <xs:element name="message" type="xs:string"></xs:element>
+                <xs:element name="datosResultado" type="tns:resultadoInfo"></xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:complexType name="carreraSearch">
+        <xs:sequence>
+            <xs:element name="idParticipante" type="xs:int"></xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="resultadoInfo">
+        <xs:sequence>
+            <xs:element name="id" type="xs:int"></xs:element>
+            <xs:element name="idParticipante" type="xs:int"></xs:element>
+            <xs:element name="idInscripcion" type="xs:int"></xs:element>
+            <xs:element name="posicionFinal" type="xs:int"></xs:element>
+            <xs:element name="premio" type="xs:int"></xs:element>
+            <xs:element name="detallePremio" type="xs:int"></xs:element>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>
