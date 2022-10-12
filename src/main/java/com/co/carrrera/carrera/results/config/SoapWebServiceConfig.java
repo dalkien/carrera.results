@@ -26,7 +26,7 @@ public class SoapWebServiceConfig extends WsConfigurerAdapter {
         MessageDispatcherServlet servlet = new MessageDispatcherServlet();
         servlet.setApplicationContext(context);
         servlet.setTransformWsdlLocations(true);
-        return new ServletRegistrationBean(servlet, "/carreraResultsWS/*");
+        return new ServletRegistrationBean(servlet, "/WS/*");
     }
     @Bean
     public XsdSchema resultadosCarreraSchema() {
@@ -38,7 +38,7 @@ public class SoapWebServiceConfig extends WsConfigurerAdapter {
 
         DefaultWsdl11Definition definition = new DefaultWsdl11Definition();
         definition.setSchema(employedSchema);
-        definition.setLocationUri("/carreraResultsWS");
+        definition.setLocationUri("/WS");
         definition.setPortTypeName("ResultsServicePort");
         definition.setTargetNamespace("http://spring.io/guides/gs-producing-web-service");
         return definition;
