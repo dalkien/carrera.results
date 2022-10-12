@@ -30,7 +30,7 @@
             <xs:element name="idInscripcion" type="xs:int"></xs:element>
             <xs:element name="posicionFinal" type="xs:int"></xs:element>
             <xs:element name="premio" type="xs:int"></xs:element>
-            <xs:element name="detallePremio" type="xs:int"></xs:element>
+            <xs:element name="detallePremio" type="xs:string"></xs:element>
         </xs:sequence>
     </xs:complexType>
 </xs:schema>
