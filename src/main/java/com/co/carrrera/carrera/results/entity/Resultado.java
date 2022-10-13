@@ -24,7 +24,7 @@ public class Resultado {
     @Column(name = "id_inscripcion")
     private int idInscripcion;
 
-    @Column(name = "poscion_final")
+    @Column(name = "posicion_final")
     private int posicionFinal;
 
     @Column(name = "premio")
